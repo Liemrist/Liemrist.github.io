@@ -1,0 +1,30 @@
+a {
+  font-weight:bold;
+  text-decoration:none;
+}
+
+article {
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 25%;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+#news {
+  display: flex;
+  flex-wrap: wrap;
+}
