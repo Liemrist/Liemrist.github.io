@@ -1,12 +1,16 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
+
 module.exports = mode => ({
   mode: mode,
-  entry: './src/index.js',
+  entry: {
+    news: './src/News/index.js',
+    welcome: './src/Welcome/index.js'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'news.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -17,13 +21,23 @@ module.exports = mode => ({
     },
     { 
       test: /\.css$/, 
-      loader: 'css-loader' 
+      use: [
+        { loader: "style-loader" },
+        { loader: "css-loader" }
+      ]
     },
   ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      filename: 'news.html',
+      template: './src/News/index.html',
+      chunks: ['news'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'welcome.html',
+      template: './src/Welcome/index.html',
+      chunks: ['welcome'],
     })
   ],
   devServer: {

@@ -1,6 +1,8 @@
 import '@babel/polyfill';
 import 'whatwg-fetch';
 
+import './styles.css';
+
 import News from './News';
 
 
