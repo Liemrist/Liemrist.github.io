@@ -9,7 +9,7 @@ module.exports = mode => ({
     welcome: './src/Welcome/index.js'
   },
   output: {
-    path: path.resolve(__dirname, './docs'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].js'
   },
   module: {
