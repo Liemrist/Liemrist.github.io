@@ -35,7 +35,7 @@ module.exports = mode => ({
       chunks: ['news'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'welcome.html',
+      filename: 'index.html',
       template: './src/Welcome/index.html',
       chunks: ['welcome'],
     })
